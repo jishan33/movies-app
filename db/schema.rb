@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_102024) do
+ActiveRecord::Schema.define(version: 2020_05_06_105112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cast_movies", force: :cascade do |t|
+    t.bigint "cast_id", null: false
+    t.bigint "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cast_id"], name: "index_cast_movies_on_cast_id"
+    t.index ["movie_id"], name: "index_cast_movies_on_movie_id"
+  end
+
+  create_table "casts", force: :cascade do |t|
+    t.string "name"
+    t.boolean "gender"
+    t.integer "birth_year"
+    t.string "country"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "directors", force: :cascade do |t|
     t.string "name"
@@ -60,6 +78,8 @@ ActiveRecord::Schema.define(version: 2020_05_06_102024) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cast_movies", "casts"
+  add_foreign_key "cast_movies", "movies"
   add_foreign_key "genre_movies", "genres"
   add_foreign_key "genre_movies", "movies"
   add_foreign_key "movies", "directors"
