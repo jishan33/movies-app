@@ -6,4 +6,5 @@ class Movie < ApplicationRecord
   belongs_to :director, dependent: :destroy
   has_many :cast_movies
   has_many :casts, through: :cast_movies
+  belongs_to :user
 end
