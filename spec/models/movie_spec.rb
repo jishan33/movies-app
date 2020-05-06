@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Movie, type: :model do
+  let(:director) { Director.new }
   subject { described_class.new(
     name: 'Lord of Rings',
     release_year: '2001',
+    director: director
   )}
 
   it 'is vaild with valid attributes' do
@@ -12,11 +14,6 @@ RSpec.describe Movie, type: :model do
 
   it 'is not valid without a name' do
     subject.name = nil
-    expect(subject).to_not be_valid
-  end
-
-  it 'is not valid if release year is not a integer' do
-    subject.release_year = '1700'
     expect(subject).to_not be_valid
   end
 
