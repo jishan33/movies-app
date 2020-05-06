@@ -45,6 +45,7 @@ Lint/RaiseException:
 
 Lint/StructNewOverride:
   Enabled: true
+
 Style/ExponentialNotation:
   Enabled: true
 
