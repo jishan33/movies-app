@@ -13,4 +13,10 @@ RSpec.describe Cast, type: :model do
     subject.name = nil
     expect(subject).to_not be_valid
   end  
+
+  it 'is not valid without a gender' do
+    subject.gender = nil
+    expect(subject).to_not be_valid
+  end  
+
 end
