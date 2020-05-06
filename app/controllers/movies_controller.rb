@@ -1,11 +1,12 @@
 class MoviesController < ApplicationController
   before_action :find_movie, only: [:show, :edit, :update]
-
+  
   def index
   end
 
   def show
-    @movie = Movie.find(params[:id])
+    #can comment this and the edit and update because of the strong params
+    # @movie = Movie.find(params[:id])
   end
 
   #still need to do some stuff here for a flash message
