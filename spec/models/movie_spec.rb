@@ -15,6 +15,11 @@ RSpec.describe Movie, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'is not valid if release year is not a integer' do
+    subject.release_year = '1700'
+    expect(subject).to_not be_valid
+  end
+
   it 'is not valid if release year is less than 1888' do
     subject.release_year = 1700
     expect(subject).to_not be_valid
