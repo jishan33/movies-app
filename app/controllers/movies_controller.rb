@@ -8,8 +8,11 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
+  #still need to do some stuff here for a flash message
   def create
+    @movie = current_user.movies.create(movie_params)
   end
+
 
   def new
     @movie = Movie.new
@@ -19,9 +22,15 @@ class MoviesController < ApplicationController
   end
 
   def update
+    @movie.update(movie_params)
+
+    redirect_to @movie
   end
 
   def destroy
+    @movie.destroy
+
+    redirect_to movies_path
   end
 
   private
