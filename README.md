@@ -1,24 +1,53 @@
-# README
+# Movie App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### A link (URL) to the website:
+(add link after deployment using Heroku)
 
-Things you may want to cover:
+### A link to the GitHub repository:
+https://github.com/jishan33/movies-app
+
+# Setup
+
+1. Clone this repository
+2. Change into the project directory
+3. Configuration: run `yarn install`
+4. Database creation: run `rails db:create`
+5. Database initialization: run `rails db:setup`
+6. open `localhost:3000` in your web browser
+7. How to run the test suite: `bin/rspec`
 
 * Ruby version
 
+  ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin18]
+
 * System dependencies
 
-* Configuration
+# Purpose
 
-* Database creation
+The website is designed for movie lovers to create,read, update and delete movie entries (including attributes like name, release year, rating, length, director, country and casts).
 
-* Database initialization
+# Functionality and Features
 
-* How to run the test suite
+### Component 1: CRUD functions
 
-* Services (job queues, cache servers, search engines, etc.)
+### Component 2: ...
 
-* Deployment instructions
+### Componenet 3: ...
 
-* ...
+# Screenshots
+
+# Target audience
+
+The target audience for the website are:
+  1. Movie lovers
+  2. Filmmakers
+
+# Tech stack
+- Ruby on Rails
+- Bootstrap
+
+# Project Management
+
+#### 07/05/2020
+![avatar](app/assets/images/docs/Rails_Group_Challange_Trello_board_20200507.png)
+
