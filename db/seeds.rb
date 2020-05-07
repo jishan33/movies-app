@@ -27,3 +27,4 @@ end
 puts "successfully seeded movies ✅"
 
 puts "seed file done"
+
