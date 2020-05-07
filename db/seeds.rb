@@ -17,6 +17,25 @@ end
 
 puts "successfully seeded countries ✅"
 
+puts "seeding directors"
+
+directors.each do |director|
+  director_record = Country.create(director)
+end 
+
+puts "successfully seeded directors ✅"
+
+
+puts "seeding genres"
+
+genres.each do |genre|
+  genre_record = Country.create(genre)
+end 
+
+puts "successfully seeded genres ✅"
+
+
+
 
 puts "seeding movies"
 
