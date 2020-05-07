@@ -1,4 +1,20 @@
 <%= form_with model: @movie, local: true do |form| %>
+
+<% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@movie.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @movie.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
 <div class="form-container">
     <div>
       <%= form.label :name %>
@@ -7,7 +23,8 @@
 
     <div>
       <%= form.label :release_year %>
-      <%= form.date_field :release_year %>
+      <%= form.number_field :release_year, min: 1888, max: 2021 %>
+
     </div>
 
     <div>
@@ -17,19 +34,30 @@
 
     <%# we can make this a dropdown for the country listing? %>
     <div>
-      <%= form.label :country %>
-      <%= form.text_field :country %>
-    </div>
-
-    <div>
       <%= form.label :length %>
       <%= form.text_field :length %>
     </div>
+    <div>
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id %>
+    </div>
 
+    <div>
+      <%= form.label :country_id %>
+      <%= form.text_field :country_id %>
+    </div>
+
+    <div>
+      <%= form.label :director_id %>
+      <%= form.text_field :director_id %>
+    </div>
     <div>
       <%= form.submit %>
     </div>
 </div>
 
+
 <% end %>
+
+
 
