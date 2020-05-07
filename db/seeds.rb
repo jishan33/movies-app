@@ -38,7 +38,16 @@ puts "successfully seeded genres ✅"
 
 
 
-# byebug
+puts "seeding casts"
+
+casts.each do |cast|
+  cast_record = Cast.create(cast)
+end 
+
+puts "successfully seeded casts ✅"
+
+
+
 puts "seeding movies"
 
 movies.each do |movie|
