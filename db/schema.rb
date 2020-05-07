@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_234134) do
+ActiveRecord::Schema.define(version: 2020_05_07_004638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(version: 2020_05_06_234134) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "gender"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "directors", force: :cascade do |t|
@@ -64,6 +70,8 @@ ActiveRecord::Schema.define(version: 2020_05_06_234134) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "director_id", null: false
     t.bigint "user_id", null: false
+    t.bigint "country_id", null: false
+    t.index ["country_id"], name: "index_movies_on_country_id"
     t.index ["director_id"], name: "index_movies_on_director_id"
     t.index ["user_id"], name: "index_movies_on_user_id"
   end
@@ -84,6 +92,7 @@ ActiveRecord::Schema.define(version: 2020_05_06_234134) do
   add_foreign_key "cast_movies", "movies"
   add_foreign_key "genre_movies", "genres"
   add_foreign_key "genre_movies", "movies"
+  add_foreign_key "movies", "countries"
   add_foreign_key "movies", "directors"
   add_foreign_key "movies", "users"
 end
