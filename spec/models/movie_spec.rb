@@ -30,5 +30,15 @@ RSpec.describe Movie, type: :model do
     relation = Movie.reflect_on_association(:user)
     expect(relation.macro).to eql(:belongs_to)
   end
+
+  it 'belongs to a Country' do
+    relation = Movie.reflect_on_association(:country)
+    expect(relation.macro).to eql(:belongs_to)
+  end
+
+  it 'belongs to a Director' do
+    relation = Movie.reflect_on_association(:director)
+    expect(relation.macro).to eql(:belongs_to)
+  end
   
 end
