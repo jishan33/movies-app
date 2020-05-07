@@ -3,7 +3,7 @@ def movies
  {
    name: 'Lord of Rings',
    release_year: 2001,
-   rating: 8.8,
+   rating: 8,
    length: '208 mins',
    user_id: 1,
    country_id: 2,
@@ -14,7 +14,7 @@ def movies
  {
    name: 'The Hobbit',
    release_year: 2012,
-   rating: 7.8,
+   rating: 7,
    length: '149 mins',
    user_id: 1,
    country_id: 2,
@@ -25,7 +25,7 @@ def movies
   {
    name: 'The Godfather',
    release_year: 1972,
-   rating: 9.0,
+   rating: 9,
    length: '175 mins',
    user_id: 2,
    country_id: 2,
@@ -35,7 +35,7 @@ def movies
  {
    name: 'Inception',
    release_year: 2010,
-   rating: 8.8,
+   rating: 8,
    length: '148 mins',
    user_id: 2,
    country_id: 2,
@@ -45,7 +45,7 @@ def movies
   {
    name: 'The Matrix',
    release_year: 1999,
-   rating: 8.7,
+   rating: 8,
    length: '136 mins',
    user_id: 1, 
    country_id: 2,
