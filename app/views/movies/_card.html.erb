@@ -4,6 +4,9 @@
     <h6 class="card-subtitle mb-2 text-muted"><%= movie.release_year %></h6>
     <p class="card-text"><%= movie.country.name %></p>
     <%= link_to 'View', movie_path(movie), class: 'btn btn-primary' %>
+    <%= link_to 'Edit', edit_movie_path(movie), class: 'btn btn-warning' %>
+    <%= link_to 'Delete', movie_path(movie), class: 'btn btn-danger', method: :delete, data: { confirm: "Really want to delete?" } %>
+
   </div>
 </div>
 
