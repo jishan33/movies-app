@@ -36,6 +36,10 @@ The website is designed for movie lovers to create,read, update and delete movie
 
 # Screenshots
 
+![Movieapp_homepage](app/assets/images/docs/Movieapp_Rootpage.png)
+
+![Movieapp_homepage](app/assets/images/docs/Movieapp_indexpage.png)
+
 # Target audience
 
 The target audience for the website are:
