@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Cast, type: :model do
   subject { described_class.new(
-    name: 'Orlando Bloom'
+    name: 'Orlando Bloom',
+    gender: 1
   )}
 
   it 'is vaild with valid attributes' do
