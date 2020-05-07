@@ -1,0 +1,35 @@
+<%= form_with model: @movie, local: true do |form| %>
+<div class="form-container">
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :release_year %>
+      <%= form.date_field :release_year %>
+    </div>
+
+    <div>
+      <%= form.label :rating %>
+      <%= form.number_field :rating, min: 0 %>
+    </div>
+
+    <%# we can make this a dropdown for the country listing? %>
+    <div>
+      <%= form.label :country %>
+      <%= form.text_field :country %>
+    </div>
+
+    <div>
+      <%= form.label :length %>
+      <%= form.text_field :length %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+</div>
+
+<% end %>
+

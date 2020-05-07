@@ -10,3 +10,4 @@ class Movie < ApplicationRecord
   belongs_to :country
 
 end
+
