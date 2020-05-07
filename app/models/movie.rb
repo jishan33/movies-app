@@ -8,6 +8,7 @@ class Movie < ApplicationRecord
   has_many :casts, through: :cast_movies
   belongs_to :user
   belongs_to :country
+  has_one_attached :picture
 
 end
 
