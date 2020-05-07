@@ -38,14 +38,48 @@ puts "successfully seeded genres ✅"
 
 
 
-# byebug
+puts "seeding casts"
+
+casts.each do |cast|
+  cast_record = Cast.create(cast)
+end 
+
+puts "successfully seeded casts ✅"
+
+
+
 puts "seeding movies"
 
 movies.each do |movie|
-  movie_reocrd = Movie.create(movie)
-end
+  movie_record = Movie.create(movie)
+end 
 
 puts "successfully seeded movies ✅"
 
+
+
+
+puts "seeding genre movies"
+
+genre_movies.each do |item|
+  genre_movies_reocrd = GenreMovie.create(item)
+end
+
+puts "successfully seeded genre-movies ✅"
+
+
+
+puts "seeding cast movies"
+
+cast_movies.each do |item|
+  cast_movies_reocrd = CastMovie.create(item)
+end
+
+puts "successfully seeded cast-movies ✅"
+
+
+
+
 puts "seed file done"
+
 

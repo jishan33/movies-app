@@ -124,6 +124,103 @@ def directors
 ]
 end
 
+def casts
+[
+  { 
+    name: 'Leonardo DiCaprio',
+    gender: 1,
+    birth_year: 1974,
+    country: 'America'
+  },
+
+  { 
+    name: 'Joseph Gordon-Levitt',
+    gender: 1,
+    birth_year: 1981,
+    country: 'America'
+  },
+
+  { 
+    name: 'Ellen Page', 
+    gender: 1,
+    birth_year: 1981,
+    country: 'America'
+  },
+
+  { 
+    name: 'Keanu Reeves',
+    gender: 1,
+    birth_year: 1964,
+    country: 'Beirut'
+  },
+
+  { 
+    name: 'Yui Aragaki',
+    gender: 0,
+    birth_year: 1988,
+    country: 'Japan'
+  }
+]
+end
+
+def genre_movies
+[
+  { 
+   movie_id: 1,
+   genre_id: 2
+  },
+
+  { 
+    movie_id: 2,
+    genre_id: 3
+  },
+
+  { 
+    movie_id: 3,
+    genre_id: 4
+  },
+
+  { 
+    movie_id: 4,
+    genre_id: 2
+  },
+
+  { 
+    movie_id: 3,
+    genre_id: 5
+  }
+]
+end
+
+
+def cast_movies
+[
+  { 
+   movie_id: 1,
+   cast_id: 2
+  },
+
+  { 
+    movie_id: 2,
+    cast_id: 3
+  },
+
+  { 
+    movie_id: 3,
+    cast_id: 4
+  },
+
+  { 
+    movie_id: 5,
+    cast_id: 4
+  },
+
+  { 
+    movie_id: 2,
+    cast_id: 5
+  }
+]
+end
 
 
 
