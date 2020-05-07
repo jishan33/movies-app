@@ -15,51 +15,51 @@
   <% end %>
 
 
-<div class="form-container">
-    <div>
+<div class="container">
+  <div class="justify-content-center">
+    <div class="form-group col-md-6">
       <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, placeholder: 'A new movie in here please', class: 'form-control' %>
     </div>
 
-    <div>
-      <%= form.label :release_year %>
-      <%= form.number_field :release_year, min: 1888, max: 2021 %>
-
-    </div>
-
-    <div>
-      <%= form.label :rating %>
-      <%= form.number_field :rating, min: 0 %>
-    </div>
-
-    <%# we can make this a dropdown for the country listing? %>
-    <div>
-      <%= form.label :length %>
-      <%= form.text_field :length %>
-    </div>
-    <div>
-      <%= form.label :user_id %>
-      <%= form.text_field :user_id %>
-    </div>
-
-    <div>
-      <%= form.label :country_id %>
-      <%= form.text_field :country_id %>
-    </div>
-
-    <div>
+    <div class="form-group col-md-6">
       <%= form.label :director_id %>
-      <%= form.text_field :director_id %>
+      <%= form.text_field :director_id, class: 'form-control' %>
     </div>
 
-    <div>
-      <%= form.label :picture %>
-      <%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
+    <div class="form-group col-md-6">
+      <%= form.label :release_year %>
+      <%= form.number_field :release_year, min: 1888, max: 2021, class: 'form-control' %>
+
     </div>
-    
-    <div>
-      <%= form.submit %>
-    </div>
+
+      <div class="form-group col-md-6">
+        <%= form.label :rating %>
+        <%= form.number_field :rating, min: 0, class: 'form-control' %>
+      </div>
+
+      <%# we can make this a dropdown for the country listing? %>
+        <div class="form-group col-md-6">
+        <%= form.label :length %>
+        <%= form.text_field :length, class: 'form-control'%>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= form.label :country_id %>
+        <%= form.text_field :country_id, class: 'form-control' %>
+      </div>
+
+
+
+      <div class="form-group col-md-6">
+        <%= form.label :picture %>
+        <%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
+      </div>
+      
+      <div class="form-group col-md-6">
+        <%= form.submit class: 'btn btn-primary mb-2' %>
+      </div>
+  </div>  
 </div>
 
 
