@@ -2,10 +2,10 @@
   <%= link_to movies_path, class: 'navbar-brand' do %> 
     <%= image_tag 'movie.svg', size: '30x30' %>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+
+    <span ></span>
   </button>
-  <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+  <div class="justify-content-between" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <% if user_signed_in? %>
         <%= link_to 'Add Movie', new_movie_path, class: 'nav-item nav-link active' %>
