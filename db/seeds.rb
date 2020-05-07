@@ -1,4 +1,5 @@
 require_relative "data/data"
+require 'byebug'
 
 Movie.destroy_all
 User.destroy_all
@@ -11,6 +12,7 @@ user_two = User.create(email: 'test-user2@restaurant.com', password: 'password')
 
 puts "seeding countries"
 
+
 countries.each do |country|
   country_record = Country.create(country)
 end 
@@ -20,7 +22,7 @@ puts "successfully seeded countries ✅"
 puts "seeding directors"
 
 directors.each do |director|
-  director_record = Country.create(director)
+  director_record = Director.create(director)
 end 
 
 puts "successfully seeded directors ✅"
@@ -29,14 +31,14 @@ puts "successfully seeded directors ✅"
 puts "seeding genres"
 
 genres.each do |genre|
-  genre_record = Country.create(genre)
+  genre_record = Genre.create(genre)
 end 
 
 puts "successfully seeded genres ✅"
 
 
 
-
+# byebug
 puts "seeding movies"
 
 movies.each do |movie|
