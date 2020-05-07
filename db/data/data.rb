@@ -25,7 +25,7 @@ def movies
    rating: 9.0,
    country_id: 1,
    length: '175 mins',
-   user_id: 3
+   user_id: 2
  },
  
  {
@@ -71,6 +71,55 @@ def countries
   }
 ]
 end
+
+def genres
+[
+  { 
+    name: 'crime'
+  },
+
+  { 
+    name: 'fantasy'
+  },
+
+  { 
+    name: 'sifi'
+  },
+
+  { 
+    name: 'comedy'
+  },
+  { 
+    name: 'romance'
+  }
+]
+end
+
+def directors
+[
+  { 
+    name: 'Perer Jackson'
+  },
+
+  { 
+    name: 'Steven Spielberg'
+  },
+
+  { 
+    name: 'Francis Ford Coppola'
+  },
+
+  { 
+    name: 'Christopher Nolan'
+  },
+  { 
+    name: 'Lana Wachowski'
+  }
+]
+end
+
+
+
 
 
 
