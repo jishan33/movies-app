@@ -8,3 +8,4 @@ class Movie < ApplicationRecord
   has_many :casts, through: :cast_movies
   belongs_to :user
 end
+
