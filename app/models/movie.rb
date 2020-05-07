@@ -7,5 +7,7 @@ class Movie < ApplicationRecord
   has_many :cast_movies
   has_many :casts, through: :cast_movies
   belongs_to :user
+  belongs_to :country
+
 end
 
