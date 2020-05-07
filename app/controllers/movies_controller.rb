@@ -1,8 +1,11 @@
 class MoviesController < ApplicationController
-  before_action :find_movie, only: [:show, :edit, :update]
+
+  before_action :find_movie, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+
   
   def index
+    @movie = Movie.all
   end
 
   def show
@@ -12,7 +15,16 @@ class MoviesController < ApplicationController
 
   #still need to do some stuff here for a flash message
   def create
-    @movie = current_user.movies.create(movie_params)
+    @movie = Movie.new(movie_params)
+    # @movie.save
+
+    # redirect_to @movie
+
+    if @movie.save
+      redirect_to @movie
+    else
+      render :new
+    end
   end
 
 
@@ -24,9 +36,11 @@ class MoviesController < ApplicationController
   end
 
   def update
-    @movie.update(movie_params)
-
-    redirect_to @movie
+    if @movie.update(movie_params)
+      redirect_to @movie
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -38,10 +52,13 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:name, :release_year, :rating, :length, :director_id, :user_id, :country_id)
-  end 
+
+    params.require(:movie).permit(:name, :release_year, :rating, :country_id, :user_id, :director_id, :length)
+  end
+
 
   def find_movie
     @movie = Movie.find(params[:id])
   end
 end
+
