@@ -1,54 +1,77 @@
-def movies [
+def movies 
+[
  {
    name: 'Lord of Rings',
-   released_year: 2001,
+   release_year: 2001,
    rating: 8.8,
-   country: 'New Zealand',
+   country_id: 1,
    length: '208 mins',
-   user_id: 1,
-   director_id: 1
+   user_id: 1
  },
  
  {
    name: 'The Hobbit',
-   released_year: 2012,
+   release_year: 2012,
    rating: 7.8,
-   country: 'New Zealand',
+   country_id: 1 ,
    length: '149 mins',
-   user_id: 1,
-   director_id: 1
+   user_id: 1
+   
  },
  
   {
    name: 'The Godfather',
-   released_year: 1972,
+   release_year: 1972,
    rating: 9.0,
-   country: 'America',
+   country_id: 1,
    length: '175 mins',
-   user_id: 1,
-   director_id: 1
+   user_id: 3
  },
  
  {
    name: 'Inception',
-   released_year: 2010,
+   release_year: 2010,
    rating: 8.8,
-   country: 'America',
+   country_id: 1,
    length: '148 mins',
-   user_id: 1,
-   director_id: 1
+   user_id: 2
  },
+
   {
    name: 'The Matrix',
-   released_year: 1999,
+   release_year: 1999,
    rating: 8.7,
-   country: 'Australia',
+   country_id: 1,
    length: '136 mins',
-   user_id: 1,
-   director_id: 1
- },
- 
- 
+   user_id: 1
+ }
  
 ]
+end
+
+def countries
+[
+  { 
+    name: 'Australia'
+  },
+
+  { 
+    name: 'New Zealand'
+  },
+
+  { 
+    name: 'America'
+  },
+
+  { 
+    name: 'Japan'
+  },
+  { 
+    name: 'Itlay'
+  }
+]
+end
+
+
+
 
