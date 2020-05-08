@@ -8,8 +8,12 @@ a {
   color: black;
 }
 
-.container {
+.form-container {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
   margin: 0px auto;
   padding: 0px 10px;
   max-width: 700px;
 }
+
