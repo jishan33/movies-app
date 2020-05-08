@@ -1,5 +1,5 @@
 require_relative "data/data"
-require 'byebug'
+
 
 Movie.destroy_all
 User.destroy_all
