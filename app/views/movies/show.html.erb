@@ -1,10 +1,33 @@
-<h1> Show page </h1>
 
-
-<h1><%= @movie.name %></h1>
-<h1><%= @movie.country.name  %>
-
-<div>
-<%= link_to 'Back', movies_path %>
+<div class="show-content">
+  <div class="show-movie-attributes-wrapper">
+    <%= image_tag picture_for(@movie) , alt: "#{@movie.name} image", class: 'card-img-top img_fluid ml-2', style: 'width:40%;'%> 
+    <div class="col-md-8">
+      <h1 class = "name"><%= @movie.name %></h1>
+      <div class = "movie-attributes">
+        <strong>Release year:  </strong>
+        <span><%= @movie.release_year %></span>
+      </div>
+      <div class = "movie-attributes">
+        <strong>Country:  </strong>
+        <span><%= @movie.country.name %></span>
+      </div>
+      <div class = "movie-attributes">
+        <strong>Director:  </strong>
+        <span><%= @movie.director.name %></span>
+      </div>
+      <div class = "movie-attributes">
+        <strong>Length:  </strong>
+        <span><%= @movie.length %></span>
+      </div>
+  </div>
+  <div class="showbuttons">
+    <% if can? :edit, @movie %>
+      <%= link_to "Edit", edit_movie_path(@movie.id), class: 'btn btn-warning' %>
+      <%= link_to "Delete", movie_path(@movie.id), method: :delete, class: 'btn btn-danger'%>
+    <% end %>
+    <%= link_to "Back", movies_path, class: 'btn btn-outline-success' %>
+  </div>
 </div>
+ 
 
