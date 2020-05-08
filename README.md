@@ -1,7 +1,7 @@
 # Movie App
 
 ### A link (URL) to the website:
-(add link after deployment using Heroku)
+ https://movies-app-teamwork.herokuapp.com/
 
 ### A link to the GitHub repository:
 https://github.com/jishan33/movies-app
