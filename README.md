@@ -49,6 +49,9 @@ The target audience for the website are:
 # Tech stack
 - Ruby on Rails
 - Bootstrap
+- Heroku
+- AWS S3
+- rspec
 
 # Project Management
 
