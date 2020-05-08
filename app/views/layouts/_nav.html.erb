@@ -1,25 +1,23 @@
-<nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+<nav class="nav navbar navbar-light bg-light">
   <%= link_to movies_path, class: 'navbar-brand' do %> 
     <%= image_tag 'movie.svg', size: '30x30' %>
   <% end %>
 
-    <span id="navbarspan"></span>
-  </button>
-  <div class="justify-content-between" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <% if user_signed_in? %>
-        <%= link_to 'Add Movie', new_movie_path, class: 'nav-item nav-link active' %>
-        <%= link_to 'Show Movies', movies_path, class: 'nav-item nav-link' %>
-      <% end %> 
-    </div>
-    <div class="navbar-nav">
-      <% unless user_signed_in? %>
-        <%= link_to 'Register', new_user_registration_path, class: 'btn btn-outline-success ml-1' %>
-        <%= link_to 'Login', new_user_session_path, class: 'btn btn-outline-success ml-1' %>
-      <% else %>
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger ml-1' %>
-      <% end %>
-    </div>
-  </div>
+    <span></span>
+      
+        <% if user_signed_in? %>
+          <%= link_to 'Add Movie', new_movie_path, class: 'nav-item nav-link active' %>
+          <%= link_to 'Show Movies', movies_path, class: 'nav-item nav-link' %>
+        <% end %> 
+      
+      <div class="navbar-button-wrapper">
+        <% unless user_signed_in? %>
+          <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-outline-success ml-1' %>
+          <%= link_to 'Log in', new_user_session_path, class: 'btn btn-outline-success ml-1' %>
+        <% else %>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger ml-1' %>
+        <% end %>
+      </div>
+  
 </nav>
 
