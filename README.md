@@ -1,7 +1,7 @@
 # Movie App
 
 ### A link (URL) to the website:
-(add link after deployment using Heroku)
+ https://movies-app-teamwork.herokuapp.com/
 
 ### A link to the GitHub repository:
 https://github.com/jishan33/movies-app
@@ -36,9 +36,9 @@ The website is designed for movie lovers to create,read, update and delete movie
 
 # Screenshots
 
-![Movieapp_homepage](app/assets/images/docs/Movieapp_Rootpage.png)
+![Movieapp_homepage](app/assets/images/docs/Homepage.png)
 
-![Movieapp_homepage](app/assets/images/docs/Movieapp_indexpage.png)
+![Movieapp_homepage](app/assets/images/docs/Indexpage.png)
 
 # Target audience
 
@@ -49,12 +49,17 @@ The target audience for the website are:
 # Tech stack
 - Ruby on Rails
 - Bootstrap
+- Heroku
+- AWS S3
+- rspec
 
 # Project Management
 
 #### 07/05/2020
 ![avatar](app/assets/images/docs/Rails_Group_Challange_Trello_board_20200507.png)
 
-#### 07/05/2020
+#### 08/05/2020
 ![avatar](app/assets/images/docs/Rails_Group_Trello_Board_20200508.png)
+
+
 
