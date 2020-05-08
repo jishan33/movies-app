@@ -16,11 +16,7 @@
 
 
 <div class="container">
-  <div class="justify-content-center">
-    <div class="form-group col-md-6">
-=======
     <div class="form-group">
->>>>>>> 15179dbccb8dfeaeada822f7f6743c3cccbacdfd
       <%= form.label :name %>
       <%= form.text_field :name, placeholder: 'A new movie in here please', class: 'form-control' %>
     </div>
@@ -36,23 +32,10 @@
 
     </div>
 
-    <div>
-      <%= form.label :rating %>
-      <%= form.number_field :rating, min: 0, max: 10 %>
-    </div>
-
-      <div class="form-group col-md-6">
-        <%= form.label :rating %>
-        <%= form.number_field :rating, min: 0, class: 'form-control' %>
-      </div>
-
-
     <div class="form-group">
       <%= form.label :rating %>
       <%= form.number_field :rating, min: 0, max: 10, class: 'form-control' %>
     </div>
-
-
       <%# we can make this a dropdown for the country listing? %>
         <div class="form-group">
         <%= form.label :length %>
@@ -78,6 +61,7 @@
 
 
 <% end %>
+
 
 
 
