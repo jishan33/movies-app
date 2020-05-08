@@ -8,5 +8,6 @@ def user_sign_up
     fill_in 'Email', with: email
     fill_in 'Password', with: password
     fill_in 'Password confirmation', with: password
+    fill_in 'Pin Code', with: '3051'
     click_on 'Sign up'
 end

@@ -58,3 +58,5 @@ gem "devise", "~> 4.7"
 gem "aws-sdk-s3", "~> 1.63"
 
 gem "cancancan", "~> 3.1"
+
+gem "recaptcha", "~> 5.5"
