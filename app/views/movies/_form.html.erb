@@ -15,6 +15,7 @@
   <% end %>
 
 
+<div class="container">
     <div class="form-group">
       <%= form.label :name %>
       <%= form.text_field :name, placeholder: 'A new movie in here please', class: 'form-control' %>
@@ -22,7 +23,7 @@
 
     <div class="form-group">
       <%= form.label :director_id %>
-      <%= form.text_field :director_id, class: 'form-control' %>
+      <%= form.collection_select(:director_id, Director.all, :id, :name, class: 'form-control') %>
     </div>
 
     <div class="form-group">
@@ -35,7 +36,6 @@
       <%= form.label :rating %>
       <%= form.number_field :rating, min: 0, max: 10, class: 'form-control' %>
     </div>
-
       <%# we can make this a dropdown for the country listing? %>
         <div class="form-group">
         <%= form.label :length %>
@@ -44,7 +44,7 @@
 
       <div class="form-group">
         <%= form.label :country_id %>
-        <%= form.text_field :country_id, class: 'form-control' %>
+        <%= form.collection_select(:country_id, Country.all, :id, :name, class: 'form-control') %>
       </div>
 
 
@@ -61,6 +61,7 @@
 
 
 <% end %>
+
 
 
 
