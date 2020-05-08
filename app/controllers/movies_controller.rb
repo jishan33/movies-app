@@ -15,16 +15,13 @@ class MoviesController < ApplicationController
 
   #still need to do some stuff here for a flash message
   def create
-    @movie = Movie.new(movie_params)
-    # @movie.save
-
-    # redirect_to @movie
-
-    if @movie.save
+    @movie = current_user.movies.create(movie_params)
+      if @movie.errors.any?
+        render :new
+      else
+      flash[:success] = "You successfully created a new listing!"
       redirect_to @movie
-    else
-      render :new
-    end
+      end
   end
 
 
