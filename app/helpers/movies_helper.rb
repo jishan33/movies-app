@@ -4,7 +4,7 @@ module MoviesHelper
     if movie.picture.present?
       movie.picture
     else
-      'movie_default.jpeg'
+      'movie_default.jpg'
     end
   end
 
