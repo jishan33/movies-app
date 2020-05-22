@@ -13,7 +13,8 @@
     align-items: center;
     width: 100vw;
 	  height: 100%;
-    background-image: linear-gradient( rgba(255,255,255,1), rgba(0,0,0,0) 40%), url("abstract-analog-art-camera-390089.jpg");
+    background-image: linear-gradient( rgba(255,255,255,1), rgba(0,0,0,0) 40%), image-url("background.jpg");
+    
     background-size: cover;
     background-position: center;
   }
