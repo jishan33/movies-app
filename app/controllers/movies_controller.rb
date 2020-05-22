@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   before_action :find_movie, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
   
   

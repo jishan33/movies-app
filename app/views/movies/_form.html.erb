@@ -16,12 +16,15 @@
 
       <div class="form-group">
         <%= form.label :name %>
-        <%= form.text_field :name, placeholder: 'A new movie in here please', class: 'form-control' %>
+        <%= form.text_field :name, placeholder: 'A new movie name', class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= form.label :director_id %>
+        <%= form.label :director %>
+        <%# <%= form.text_field :name, placeholder: 'Director Name', class: 'form-control' %> 
+
         <%= form.collection_select(:director_id, Director.all, :id, :name, class: 'form-control') %>
+        
       </div>
 
       <div class="form-group">

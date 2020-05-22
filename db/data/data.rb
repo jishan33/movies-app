@@ -77,9 +77,19 @@ def countries
   { 
     name: 'Japan'
   },
+
   { 
     name: 'Itlay'
+  },
+
+  { 
+    name: 'Taiwan'
+  },
+
+  { 
+    name: 'Germany'
   }
+
 ]
 end
 
@@ -94,12 +104,13 @@ def genres
   },
 
   { 
-    name: 'sifi'
+    name: 'Sifi'
   },
 
   { 
     name: 'comedy'
   },
+  
   { 
     name: 'romance'
   }
