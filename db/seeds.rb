@@ -7,9 +7,9 @@ User.destroy_all
 puts "seeding users"
 
 
-user_one = User.create(email: 'test-user1@restaurant.com', password: 'password')
-user_two = User.create(email: 'test-user2@restaurant.com', password: 'password')
-user_two = User.create(email: 'test-user2@restaurant.com', password: 'password', admin: true)
+user_one = User.create(email: 'test-user1@movie.com', password: '333password')
+user_two = User.create(email: 'test-user2@movie.com', password: '333password')
+user_admin = User.create(email: 'admin@restaurant.com', password: '333password', admin: true)
 
 
 puts "seeding countries"
@@ -53,7 +53,8 @@ puts "successfully seeded casts ✅"
 puts "seeding movies"
 
 movies.each do |movie|
-  movie_record = Movie.create(movie)
+  movie_record = Movie.create(movie.except(:picture))
+  movie_record.picture.attach(io: File.open("app/assets/images/seed/#{movie[:picture]}"), filename: "#{movie[:picture]}", content_type: 'image/jpg')
 end 
 
 puts "successfully seeded movies ✅"

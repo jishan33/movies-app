@@ -8,6 +8,9 @@
         <% if user_signed_in? %>
           <%= link_to 'Add Movie', new_movie_path, class: 'nav-item nav-link active' %>
           <%= link_to 'Show Movies', movies_path, class: 'nav-item nav-link' %>
+            <% if current_user.admin? %>
+              <%= link_to 'Users List', users_list_path, class: 'nav-item nav-link' %>
+            <% end %>
         <% end %> 
       
       <div class="navbar-button-wrapper">

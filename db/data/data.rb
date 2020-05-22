@@ -1,55 +1,60 @@
 def movies 
 [
  {
-   name: 'Lord of Rings',
-   release_year: 2001,
-   rating: 8,
-   length: '208 mins',
-   user_id: 1,
-   country_id: 2,
-   director_id: 2
+    name: 'Lord of Rings',
+    release_year: 2001,
+    rating: 8,
+    length: '208 mins',
+    user_id: 1,
+    country_id: 2,
+    director_id: 2,
+    picture: 'lordofrings.jpg'
 
  },
  
  {
-   name: 'The Hobbit',
-   release_year: 2012,
-   rating: 7,
-   length: '149 mins',
-   user_id: 1,
-   country_id: 2,
-   director_id: 2
+    name: 'The Hobbit',
+    release_year: 2012,
+    rating: 7,
+    length: '149 mins',
+    user_id: 1,
+    country_id: 2,
+    director_id: 2,
+    picture: 'hobbit.jpg'
    
  },
  
   {
-   name: 'The Godfather',
-   release_year: 1972,
-   rating: 9,
-   length: '175 mins',
-   user_id: 2,
-   country_id: 2,
-   director_id: 2
+    name: 'The Godfather',
+    release_year: 1972,
+    rating: 9,
+    length: '175 mins',
+    user_id: 2,
+    country_id: 2,
+    director_id: 2,
+    picture: 'godfather.jpg'
  },
  
  {
-   name: 'Inception',
-   release_year: 2010,
-   rating: 8,
-   length: '148 mins',
-   user_id: 2,
-   country_id: 2,
-   director_id: 2
+    name: 'Inception',
+    release_year: 2010,
+    rating: 8,
+    length: '148 mins',
+    user_id: 2,
+    country_id: 2,
+    director_id: 2,
+    picture: 'inception.jpg'
  },
 
   {
-   name: 'The Matrix',
-   release_year: 1999,
-   rating: 8,
-   length: '136 mins',
-   user_id: 1, 
-   country_id: 2,
-   director_id: 2
+    name: 'The Matrix',
+    release_year: 1999,
+    rating: 8,
+    length: '136 mins',
+    user_id: 1, 
+    country_id: 2,
+    director_id: 2,
+    picture: 'matrix.jpg'
  }
  
 ]
