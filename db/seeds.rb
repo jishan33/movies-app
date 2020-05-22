@@ -9,6 +9,8 @@ puts "seeding users"
 
 user_one = User.create(email: 'test-user1@restaurant.com', password: 'password')
 user_two = User.create(email: 'test-user2@restaurant.com', password: 'password')
+user_two = User.create(email: 'test-user2@restaurant.com', password: 'password', admin: true)
+
 
 puts "seeding countries"
 
